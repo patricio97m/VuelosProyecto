@@ -1,8 +1,4 @@
-﻿
-@{
-	ViewBag.Title = "Details";
-	Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model Vidly.Models.Customer
 
 @{
 	ViewBag.Title = "Details";
@@ -11,5 +7,13 @@
 
 <h2>Detalles del cliente</h2>
 
-<p>Nombre: @Model.Name</p>
+<p>Nombre: @Model.Name </p>
+<ul>
+	<li>Tipo de membresía: @Model.MembershipType.Name</li>
+
+	@if (Model.Birthdate.HasValue)
+	{
+		<li>Cumpleaños: @Model.Birthdate.Value.ToShortDateString()</li>
+	}
+</ul>
 

@@ -215,8 +215,33 @@
     <Compile Include="Migrations\202304072348112_AddMembershipType.designer.cs">
       <DependentUpon>202304072348112_AddMembershipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304080032366_PopularMembershipTypes.cs" />
+    <Compile Include="Migrations\202304080032366_PopularMembershipTypes.designer.cs">
+      <DependentUpon>202304080032366_PopularMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304080045330_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\202304080045330_ApplyAnnotationsToCustomerName.designer.cs">
+      <DependentUpon>202304080045330_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304080204192_ApplyNameToMembership.cs" />
+    <Compile Include="Migrations\202304080204192_ApplyNameToMembership.designer.cs">
+      <DependentUpon>202304080204192_ApplyNameToMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304080220282_ApplyBirthdate.cs" />
+    <Compile Include="Migrations\202304080220282_ApplyBirthdate.designer.cs">
+      <DependentUpon>202304080220282_ApplyBirthdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304080239528_ResolveBirthdate.cs" />
+    <Compile Include="Migrations\202304080239528_ResolveBirthdate.designer.cs">
+      <DependentUpon>202304080239528_ResolveBirthdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304092052231_implementedMovies.cs" />
+    <Compile Include="Migrations\202304092052231_implementedMovies.designer.cs">
+      <DependentUpon>202304092052231_implementedMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -274,10 +299,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customer\List.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -318,6 +344,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304072348112_AddMembershipType.resx">
       <DependentUpon>202304072348112_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304080032366_PopularMembershipTypes.resx">
+      <DependentUpon>202304080032366_PopularMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304080045330_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>202304080045330_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304080204192_ApplyNameToMembership.resx">
+      <DependentUpon>202304080204192_ApplyNameToMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304080220282_ApplyBirthdate.resx">
+      <DependentUpon>202304080220282_ApplyBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304080239528_ResolveBirthdate.resx">
+      <DependentUpon>202304080239528_ResolveBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304092052231_implementedMovies.resx">
+      <DependentUpon>202304092052231_implementedMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

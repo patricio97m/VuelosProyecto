@@ -1,51 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 using Vidly.Models;
-using Vidly.ViewModels;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies/Random
-        public ActionResult Random()
+        private MyDBContext _context;
+        public MoviesController()
         {
-            var movie = new List<Movie>
-            {
-                new Movie { Name = "Titanic" },
-                new Movie { Name = "Toy Story" },
-                new Movie { Name = "Viernes 13" },
-                new Movie { Name = "El Padrino" }
-            };
-            var viewModel = new RandomMovieViewModel
-            {
-                Movies = movie,
-            };
-            return View(viewModel);
+            _context = new MyDBContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
         }
 
-
+        public ActionResult Index()
+        {
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            return View(movies);
+        }
 
         public ActionResult Edit(int id)
         {
             return Content("id= " + id);
         }
 
-        //movies 
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Details(int id)
         {
-            if (!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
+            var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
 
-            if (String.IsNullOrWhiteSpace(sortBy))
-            {
-                sortBy = "Name";
-            }
+            if (movie == null)
+                return HttpNotFound();
 
-            return Content(String.Format("pageIndex={0}/sortBy={1}", pageIndex, sortBy));
+            return View(movie);
 
         }
 

@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<Vidly.Models.Movie>
+
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Películas</h2>
+
+<table class="table table-striped table-bordered table-light">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Nombre</th>
+			<th scope="col">Año de lanzamiento</th>
+			<th scope="col">Género</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var movies in Model)
+		{
+			<tr>
+				<td>@Html.ActionLink(movies.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
+				<td>
+					@if (movies.ReleaseDate != null)
+					{
+						@movies.ReleaseDate.Value.Year
+					}
+				</td>
+				<td>@movies.Genre.Name</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

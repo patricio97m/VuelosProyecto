@@ -15,21 +15,24 @@ else
 {
 	<table class="table table-striped table-bordered table-light">
 		<thead class="thead-dark">
-			<tr>
-				<th scope="col">Nombre</th>
-				<th scope="col">Tipo de suscripción</th>
-				<th scope="col">Descuento</th>
-			</tr>
+		<tr>
+			<th scope="col">Nombre</th>
+			<th scope="col">Tipo de suscripción</th>
+			<th scope="col">Descuento</th>
+		</tr>
 		</thead>
 		<tbody>
-			@foreach (var customer in Model)
-			{
-				<tr>
-					<td>@Html.ActionLink(customer.Name, "Edit", "Customer", new { id = customer.Id }, null)</td>
-					<td>@customer.MembershipType.Name</td>
-					<td>@customer.MembershipType.DiscountRate%</td>
-				</tr>
-			}
+		@foreach (var customer in Model)
+		{
+			<tr>
+				<td>@Html.ActionLink(customer.Name, "Edit", "Customer", new { id = customer.Id }, null)</td>
+				<td>@customer.MembershipType.Name</td>
+				<td>@customer.MembershipType.DiscountRate%</td>
+			</tr>
+		}
 		</tbody>
 	</table>
+	<p>
+		@Html.ActionLink("Nuevo cliente", "New", "Customer", null, new { @class = "btn btn-primary" })
+	</p>
 }

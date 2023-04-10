@@ -239,10 +239,27 @@
     <Compile Include="Migrations\202304092052231_implementedMovies.designer.cs">
       <DependentUpon>202304092052231_implementedMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304100451367_ValidationsAdded.cs" />
+    <Compile Include="Migrations\202304100451367_ValidationsAdded.designer.cs">
+      <DependentUpon>202304100451367_ValidationsAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304100507384_ValidationsFixed.cs" />
+    <Compile Include="Migrations\202304100507384_ValidationsFixed.designer.cs">
+      <DependentUpon>202304100507384_ValidationsFixed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304100509136_ValidationsFixed2.cs" />
+    <Compile Include="Migrations\202304100509136_ValidationsFixed2.designer.cs">
+      <DependentUpon>202304100509136_ValidationsFixed2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202304100518094_ValidationsFixed3.cs" />
+    <Compile Include="Migrations\202304100518094_ValidationsFixed3.designer.cs">
+      <DependentUpon>202304100518094_ValidationsFixed3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -366,6 +383,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304092052231_implementedMovies.resx">
       <DependentUpon>202304092052231_implementedMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100451367_ValidationsAdded.resx">
+      <DependentUpon>202304100451367_ValidationsAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100507384_ValidationsFixed.resx">
+      <DependentUpon>202304100507384_ValidationsFixed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100509136_ValidationsFixed2.resx">
+      <DependentUpon>202304100509136_ValidationsFixed2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304100518094_ValidationsFixed3.resx">
+      <DependentUpon>202304100518094_ValidationsFixed3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

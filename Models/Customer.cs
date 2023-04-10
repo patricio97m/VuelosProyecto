@@ -7,7 +7,7 @@ namespace Vidly.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Nombre inválido")]
         [StringLength(255)]
         [Display(Name = "Nombre")]
         public string Name { get; set; }
@@ -20,6 +20,7 @@ namespace Vidly.Models
         public byte MembershipTypeId { get; set; }
 
         [Display(Name = "Cumpleaños")]
+        [Min18YearsIfAMember]
         public DateTime? Birthdate { get; set; }
     }
 }

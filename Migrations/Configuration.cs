@@ -1,18 +1,16 @@
-﻿namespace Vidly.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+﻿using System.Data.Entity.Migrations;
+using Vuelos.Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Vidly.Models.MyDBContext>
+namespace Vuelos.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<MyDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Vidly.Models.MyDBContext context)
+        protected override void Seed(MyDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

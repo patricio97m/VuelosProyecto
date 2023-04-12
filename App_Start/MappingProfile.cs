@@ -1,24 +1,19 @@
 ﻿using AutoMapper;
-using Vidly.Dtos;
-using Vidly.Models;
+using Vuelos.Dtos;
+using Vuelos.Models;
 
-namespace Vidly.App_Start
+namespace Vuelos
 {
     public class MappingProfile : Profile
 
     {
         public MappingProfile()
         {
-            Mapper.CreateMap<Customer, CustomerDto>();
-            Mapper.CreateMap<Movie, MovieDto>();
-            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
-            Mapper.CreateMap<Genre, GenreDto>();
+            Mapper.CreateMap<Vuelo, VueloDto>();
 
-            Mapper.CreateMap<CustomerDto, Customer>()
+            Mapper.CreateMap<VueloDto, Vuelo>()
                 .ForMember(c => c.Id, opt => opt.Ignore());
 
-            Mapper.CreateMap<MovieDto, Movie>()
-                .ForMember(c => c.Id, opt => opt.Ignore());
         }
     }
 }

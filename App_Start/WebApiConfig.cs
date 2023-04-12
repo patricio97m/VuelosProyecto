@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.Web.Http;
 
-namespace Vidly
+namespace Vuelos
 {
     public static class WebApiConfig
     {

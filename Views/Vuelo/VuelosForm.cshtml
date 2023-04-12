@@ -1,0 +1,39 @@
+﻿
+@model Vuelos.ViewModels.VueloFormViewModel
+@{
+	ViewBag.Title = "CustomerForm";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+
+@using (Html.BeginForm("Save", "Vuelo"))
+{
+
+	<div class="form-group mt-2">
+		@Html.LabelFor(m => m.Vuelo.HorarioDeLLegada)
+		@Html.TextBoxFor(m => m.Vuelo.HorarioDeLLegada, "{0:hh:mm}", new { @class = "form-control" })
+		@Html.ValidationMessageFor(m => m.Vuelo.HorarioDeLLegada)
+	</div>
+	<div class="form-group mt-2">
+		@Html.LabelFor(m => m.Vuelo.Nombre)
+		@Html.TextBoxFor(m => m.Vuelo.Nombre, new { @class = "form-control", placeholder = "Número de vuelo p.ej.: AU 2399" })
+		@Html.ValidationMessageFor(m => m.Vuelo.Nombre)
+	</div>
+	<div class="form-group mt-2">
+		@Html.LabelFor(m => m.Vuelo.LineaAerea)
+		@Html.TextBoxFor(m => m.Vuelo.LineaAerea, new { @class = "form-control", placeholder = "Línea aerea p.ej.: Latam" })
+		@Html.ValidationMessageFor(m => m.Vuelo.LineaAerea)
+	</div>
+
+	<div class="checkbox mt-2">
+		<label>
+			¿Demorado?
+			@Html.CheckBoxFor(m => m.Vuelo.Demorado)
+		</label>
+	</div>
+	@Html.HiddenFor(m => m.Vuelo.Id)
+	@Html.AntiForgeryToken()
+	<button type="submit" class="btn btn-primary mt-2">@Model.ButtonText</button>
+}
+

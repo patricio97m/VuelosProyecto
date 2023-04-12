@@ -1,0 +1,24 @@
+﻿@model Vuelos.ViewModels.VueloFormViewModel
+
+@{
+    ViewBag.Title = "Baja";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Baja</h2>
+
+@using (Html.BeginForm("Delete", "Vuelo"))
+{
+    <div class="form-group mt-3">
+        @Html.DropDownListFor(m => m.Vuelo.Id,
+            new SelectList(Model.Vuelos, "Id", "Nombre"),
+            "Seleccione un vuelo", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-danger mt-2">Eliminar</button>
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval");
+}

@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Vidly
+namespace Vuelos
 {
     public class RouteConfig
     {
@@ -26,7 +26,7 @@ namespace Vidly
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Customer", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Vuelo", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

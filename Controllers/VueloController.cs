@@ -27,18 +27,6 @@ namespace Vuelos.Controllers
             return View(vuelos);
         }
 
-        // GET: Customers/Details/5
-        public ActionResult Details(int id)
-        {
-            var vuelo = _context.Vuelo.SingleOrDefault(c => c.Id == id);
-            if (vuelo == null)
-            {
-                return HttpNotFound();
-            };
-            return View(vuelo);
-        }
-
-
         public ActionResult New()
         {
             var ViewModel = new VueloFormViewModel

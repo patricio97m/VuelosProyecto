@@ -10,13 +10,7 @@ namespace Vuelos
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
                 "~/Scripts/jquery-{version}.js",
                 "~/Scripts/bootstrap.js",
-                "~/scripts/bootbox.js",
-                "~/Scripts/respond.js",
-                "~/scripts/datatables/jquery.datatables.js",
-                "~/scripts/datatables/datatables.bootstrap.js",
-                "~/scripts/typeahead.bundle.js",
-                "~/scripts/toastr.js"
-
+                "~/Scripts/respond.js"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -29,9 +23,6 @@ namespace Vuelos
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap-flatly.css",
-                "~/content/datatables/css/datatables.bootstrap.css",
-                "~/content/typeahead.css",
-                "~/content/toastr.css",
                 "~/Content/site.css"));
         }
     }
